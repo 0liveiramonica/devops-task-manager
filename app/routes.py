@@ -1,0 +1,33 @@
+from flask import Blueprint, jsonify
+
+
+main = Blueprint("main", __name__)
+
+
+@main.route("/")
+def home():
+    return """
+    <h1>DevOps Task Manager</h1>
+    <p>Aplicação criada para demonstrar práticas DevOps.</p>
+    """
+
+
+@main.route("/api/tasks")
+def tasks():
+    return jsonify([
+        {
+            "id": 1,
+            "title": "Configurar Git",
+            "status": "concluída"
+        },
+        {
+            "id": 2,
+            "title": "Criar container Docker",
+            "status": "pendente"
+        },
+        {
+            "id": 3,
+            "title": "Configurar integração contínua",
+            "status": "pendente"
+        }
+    ])
