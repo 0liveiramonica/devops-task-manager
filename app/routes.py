@@ -6,10 +6,7 @@ main = Blueprint("main", __name__)
 
 @main.route("/")
 def home():
-    return """
-    <h1>DevOps Task Manager - Versao Feature</h1>
-    <p>Aplicação criada para demonstrar práticas DevOps.</p>
-    """
+    return "<h1>DevOps Task Manager - Branch FEATURE</h1>"
 
 
 @main.route("/api/tasks")
